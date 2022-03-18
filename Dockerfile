@@ -14,4 +14,5 @@ RUN npm run build
 # Run phase
 # Use an existing docker image as a base
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
